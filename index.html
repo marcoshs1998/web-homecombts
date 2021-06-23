@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco Design</title>
+    <!-- css do bootstrap -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.css" />
+    <!-- css customizado -->
+    <style type="text/css">
+        .header-intro {
+            width: calc(100vw - 1rem);
+            height: 100vh;
+            /* 100% da largura e altura da janela aberta */
+        }
+
+        #backgroundslider,
+        #backgroundslider>.carousel-inner,
+        #backgroundslider>.carousel-inner .carousel-item,
+        #backgroundslider>.carousel-inner .carousel-item img {
+            width: 100%;
+            height: 100%;
+            /* 100% de altura e largura diante da caixa de onde estão postos */
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .ajuste-corte-img {
+            object-fit: cover;
+        }
+
+        .ajuste-img-card {
+            height: calc(3 / 4 * 100%) !important;
+            object-fit: cover !important;
+        }
+
+        /** carregando uma fonte */
+        @font-face {
+            font-family: "DIMITRI";
+            src: url("assets/fonts/dimitri/DIMITRI_.TTF");
+        }
+
+        @font-face {
+            font-family: "METRO";
+            src: url("assets/fonts/metro/Metro.otf");
+        }
+
+        .logo {
+            font-family: "DIMITRI";
+            font-size: 2.8rem;
+            text-shadow: 1px 0.5px 4px rgba(0, 0, 0, 0.603);
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+
+    <!-- inicio do menu de navegação -->
+    <nav class="navbar fixed-top">
+        <div class="container align-items-start">
+            <a href="#" class="navbar-brand">
+                <span class="logo text-white">MARCO</span>
+            </a>
+
+            <div>
+                <button class="btn btn-danger">Agende uma</button>
+                <button class="btn btn-warning">
+                    Menu
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- fim do menu de navegação -->
+
+    <header class="header-intro">
+        <!-- ínicio do slider -->
+        <div id="backgroundslider" class="carousel slide" data-bs-ride="carousel">
+            <!-- slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item" data-bs-interval="3500">
+                    <img src="assets/img/img1.jpg" class="ajuste-corte-img" />
+                </div>
+                <div class="carousel-item active" data-bs-interval="3500">
+                    <img src="assets/img/img2.jpg" class="ajuste-corte-img" />
+                </div>
+                <div class="carousel-item" data-bs-interval="3500">
+                    <img src="assets/img/img3.jpg" class="ajuste-corte-img" />
+                </div>
+            </div>
+            <!-- botões indicadores -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#backgroundslider" data-bs-slide-to="0"></button>
+                <button type="button" data-bs-target="#backgroundslider" data-bs-slide-to="1" class="active"></button>
+                <button type="button" data-bs-target="#backgroundslider" data-bs-slide-to="2"></button>
+            </div>
+        </div>
+        <!-- fim do slide -->
+
+        <!-- legendas -->
+        <h2 class="position-absolute p-3 ps-5 text-white bg-danger animate__animated animate__fadeInDown animate__delay-2s" style="top: 50%; left: 0;">
+            DESENHAMOS O<br>COM VOCÊ
+        </h2>
+        <h2 class="position-absolute p-3 pe-5 text-white bg-primary animate__animated animate__lightSpeedInLeft animate__delay-3s" style="bottom: 60px; right: 0;">
+            A ESCOLA DA SUA VIDA
+        </h2>
+        <!-- fim das legendas -->
+    </header>
+
+    <!-- sessão de cartões -->
+    <section class="container">
+        <!-- area do título -->
+        <div class="row">
+            <div class="col">
+                <!-- 
+                    text-center : centraliza o texto
+                    py-3 : espaçamento topo e baixo em 3 * 8px
+                -->
+                <h2 class="text-center py-3">Por que embarcar conosco?</h2>
+            </div>
+        </div>
+        <!-- area dos cartoes -->
+        <div class="row justify-content-center px-5">
+            <div class="mb-5 col-10 col-md-8 col-lg-4">
+                <div class="card h-100 border-0">
+                    <img src="assets/img-cards/img1.jpg" class="card-img-top ajuste-img-card">
+                    <div class="card-body">
+                        <h4 class="card-title">Boa gestão</h4>
+                        <p>Faça sua consultoria com quem entende e tem bom espirito de mercado.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-5 col-10 col-md-8 col-lg-4">
+                <div class="card h-100 border-0">
+                    <img src="assets/img-cards/img2.jpg" class="card-img-top ajuste-img-card">
+                    <div class="card-body">
+                        <h4 class="card-title">Habilidades</h4>
+                        <p>Esteja ao lado de quem entende, com as melhores práticas do mercado profissional.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-5 col-10 col-md-8 col-lg-4">
+                <div class="card h-100 border-0">
+                    <img src="assets/img-cards/img3.jpg" class="card-img-top ajuste-img-card">
+                    <div class="card-body">
+                        <h4 class="card-title">Crescimento</h4>
+                        <p>Alavanque o seu negócio, com foco no que é importante para você e seus clientes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container-fluid bg-info">
+        <h6 class="text-center pt-5">&copy; 2021 MARCO DESIGN - TODOS OS DIREITOS LIVRES.</h6>
+
+        <br>
+        <br>
+        <br>
+
+    </footer>
+    <!-- scripts da página -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+
+</html>
